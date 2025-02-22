@@ -1,0 +1,215 @@
+{
+    "additional-repositories": [],
+    "archinstall-language": "English",
+    "audio_config": {
+        "audio": "pipewire"
+    },
+    "bootloader": "Systemd-boot",
+    "config_version": "3.0.2",
+    "disk_config": {
+        "config_type": "manual_partitioning",
+        "device_modifications": [
+            {
+                "device": "/dev/sda",
+                "partitions": [
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/home",
+                                "name": "@home"
+                            },
+                            {
+                                "mountpoint": "/media",
+                                "name": "@media"
+                            },
+                            {
+                                "mountpoint": "/home/docker_data",
+                                "name": "@home/docker_data"
+                            },
+                            {
+                                "mountpoint": "/home/homelab",
+                                "name": "@home/homelab"
+                            }
+                        ],
+                        "dev_path": "/dev/sda1",
+                        "flags": [
+                            "linux-home"
+                        ],
+                        "fs_type": "btrfs",
+                        "mount_options": [
+                            "compress=zstd"
+                        ],
+                        "mountpoint": null,
+                        "obj_id": "fd97cde8-f437-4f13-97dc-c6bf0caf0504",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 500106796544
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "sectors",
+                            "value": 2048
+                        },
+                        "status": "modify",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": false
+            },
+            {
+                "device": "/dev/sdb",
+                "partitions": [
+                    {
+                        "btrfs": [],
+                        "dev_path": null,
+                        "flags": [
+                            "boot",
+                            "esp"
+                        ],
+                        "fs_type": "fat32",
+                        "mount_options": [],
+                        "mountpoint": "/boot",
+                        "obj_id": "9c7fc8da-bbcf-4a41-b564-bd5ba946e92e",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "GiB",
+                            "value": 1
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "MiB",
+                            "value": 1
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    },
+                    {
+                        "btrfs": [
+                            {
+                                "mountpoint": "/",
+                                "name": "@"
+                            },
+                            {
+                                "mountpoint": "/var/log",
+                                "name": "@log"
+                            },
+                            {
+                                "mountpoint": "/var/cache/pacman/pkg",
+                                "name": "@pkg"
+                            },
+                            {
+                                "mountpoint": "/.snapshots",
+                                "name": "@.snapshots"
+                            }
+                        ],
+                        "dev_path": null,
+                        "flags": [],
+                        "fs_type": "btrfs",
+                        "mount_options": [
+                            "compress=zstd"
+                        ],
+                        "mountpoint": null,
+                        "obj_id": "64bcb3fb-1a72-4f2c-a9f1-c87932bcf34b",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 254985371648
+                        },
+                        "start": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 1074790400
+                        },
+                        "status": "create",
+                        "type": "primary"
+                    }
+                ],
+                "wipe": true
+            }
+        ]
+    },
+    "disk_encryption": null,
+    "hostname": "timofey-laptop",
+    "kernels": [
+        "linux-zen"
+    ],
+    "locale_config": {
+        "kb_layout": "us",
+        "sys_enc": "UTF-8",
+        "sys_lang": "en_US"
+    },
+    "mirror_config": {
+        "custom_mirrors": [],
+        "mirror_regions": {
+            "Russia": [
+                "http://mirror.yandex.ru/archlinux/$repo/os/$arch",
+                "https://mirror.yandex.ru/archlinux/$repo/os/$arch",
+                "http://ru.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "https://ru.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "http://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
+                "https://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
+                "http://mirrors.powernet.com.ru/archlinux/$repo/os/$arch",
+                "http://repository.su/archlinux/$repo/os/$arch",
+                "https://repository.su/archlinux/$repo/os/$arch",
+                "http://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
+                "https://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
+                "http://mirror.kamtv.ru/archlinux/$repo/os/$arch",
+                "https://mirror.kamtv.ru/archlinux/$repo/os/$arch",
+                "https://mirror2.sl-chat.ru/archlinux/$repo/os/$arch",
+                "https://mirror3.sl-chat.ru/archlinux/$repo/os/$arch",
+                "http://mirror.kpfu.ru/archlinux/$repo/os/$arch",
+                "https://mirror.kpfu.ru/archlinux/$repo/os/$arch",
+                "http://archlinux.gay/archlinux/$repo/os/$arch",
+                "https://archlinux.gay/archlinux/$repo/os/$arch",
+                "http://web.sketserv.ru/archlinux/$repo/os/$arch",
+                "https://web.sketserv.ru/archlinux/$repo/os/$arch"
+            ]
+        }
+    },
+    "network_config": {
+        "type": "nm"
+    },
+    "ntp": true,
+    "packages": [
+        "i3status-rust",
+        "flatpak"
+    ],
+    "parallel downloads": 0,
+    "profile_config": {
+        "gfx_driver": "Intel (open-source)",
+        "greeter": "ly",
+        "profile": {
+            "custom_settings": {
+                "i3-wm": {}
+            },
+            "details": [
+                "i3-wm"
+            ],
+            "main": "Desktop"
+        }
+    },
+    "save_config": null,
+    "swap": true,
+    "timezone": "Europe/Moscow",
+    "uki": false,
+    "version": "3.0.2"
+}
