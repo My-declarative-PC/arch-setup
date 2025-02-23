@@ -23,15 +23,11 @@
                                 "name": "@media"
                             },
                             {
-                                "mountpoint": "/home/docker_data",
-                                "name": "@home/docker_data"
-                            },
-                            {
-                                "mountpoint": "/home/homelab",
-                                "name": "@home/homelab"
+                                "mountpoint": "/var/lib/docker",
+                                "name": "@docker"
                             }
                         ],
-                        "dev_path": "/dev/sda1",
+                        "dev_path": null,
                         "flags": [
                             "linux-home"
                         ],
@@ -39,29 +35,29 @@
                         "mount_options": [
                             "compress=zstd"
                         ],
-                        "mountpoint": null,
-                        "obj_id": "fd97cde8-f437-4f13-97dc-c6bf0caf0504",
+                        "mountpoint": "/home",
+                        "obj_id": "f08c1ac4-a5de-4888-abe9-7aa5854386f6",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
                                 "value": 512
                             },
                             "unit": "B",
-                            "value": 500106796544
+                            "value": 500106788864
                         },
                         "start": {
                             "sector_size": {
                                 "unit": "B",
                                 "value": 512
                             },
-                            "unit": "sectors",
-                            "value": 2048
+                            "unit": "MiB",
+                            "value": 1
                         },
-                        "status": "modify",
+                        "status": "create",
                         "type": "primary"
                     }
                 ],
-                "wipe": false
+                "wipe": true
             },
             {
                 "device": "/dev/sdb",
@@ -76,7 +72,7 @@
                         "fs_type": "fat32",
                         "mount_options": [],
                         "mountpoint": "/boot",
-                        "obj_id": "9c7fc8da-bbcf-4a41-b564-bd5ba946e92e",
+                        "obj_id": "943d060d-078c-4938-a0a2-e36316b56e5e",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
@@ -122,7 +118,7 @@
                             "compress=zstd"
                         ],
                         "mountpoint": null,
-                        "obj_id": "64bcb3fb-1a72-4f2c-a9f1-c87932bcf34b",
+                        "obj_id": "0e384f68-4a7c-4ec5-b5ba-22b6e59d3877",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
@@ -190,8 +186,8 @@
     },
     "ntp": true,
     "packages": [
-        "i3status-rust",
-        "flatpak"
+        "flatpak",
+        "git"
     ],
     "parallel downloads": 0,
     "profile_config": {
