@@ -20,11 +20,11 @@
                             },
                             {
                                 "mountpoint": "/media",
-                                "name": "@media"
+                                "name": "@home/media"
                             },
                             {
                                 "mountpoint": "/var/lib/docker",
-                                "name": "@docker"
+                                "name": "@home/docker"
                             }
                         ],
                         "dev_path": null,
@@ -155,31 +155,7 @@
     },
     "mirror_config": {
         "custom_mirrors": [],
-        "mirror_regions": {
-            "Russia": [
-                "http://mirror.yandex.ru/archlinux/$repo/os/$arch",
-                "https://mirror.yandex.ru/archlinux/$repo/os/$arch",
-                "http://ru.mirrors.cicku.me/archlinux/$repo/os/$arch",
-                "https://ru.mirrors.cicku.me/archlinux/$repo/os/$arch",
-                "http://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
-                "https://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
-                "http://mirrors.powernet.com.ru/archlinux/$repo/os/$arch",
-                "http://repository.su/archlinux/$repo/os/$arch",
-                "https://repository.su/archlinux/$repo/os/$arch",
-                "http://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
-                "https://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
-                "http://mirror.kamtv.ru/archlinux/$repo/os/$arch",
-                "https://mirror.kamtv.ru/archlinux/$repo/os/$arch",
-                "https://mirror2.sl-chat.ru/archlinux/$repo/os/$arch",
-                "https://mirror3.sl-chat.ru/archlinux/$repo/os/$arch",
-                "http://mirror.kpfu.ru/archlinux/$repo/os/$arch",
-                "https://mirror.kpfu.ru/archlinux/$repo/os/$arch",
-                "http://archlinux.gay/archlinux/$repo/os/$arch",
-                "https://archlinux.gay/archlinux/$repo/os/$arch",
-                "http://web.sketserv.ru/archlinux/$repo/os/$arch",
-                "https://web.sketserv.ru/archlinux/$repo/os/$arch"
-            ]
-        }
+        "mirror_regions": {}
     },
     "network_config": {
         "type": "nm"
