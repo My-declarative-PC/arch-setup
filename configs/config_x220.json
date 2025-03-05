@@ -33,7 +33,7 @@
                         ],
                         "fs_type": "btrfs",
                         "mount_options": [
-                            "compress=zstd"
+                            "compress=zstd,noatime,discard=async"
                         ],
                         "mountpoint": "/home",
                         "obj_id": "f08c1ac4-a5de-4888-abe9-7aa5854386f6",
@@ -115,7 +115,7 @@
                         "flags": [],
                         "fs_type": "btrfs",
                         "mount_options": [
-                            "compress=zstd"
+                            "compress=zstd,noatime,discard=async"
                         ],
                         "mountpoint": null,
                         "obj_id": "0e384f68-4a7c-4ec5-b5ba-22b6e59d3877",
@@ -154,24 +154,40 @@
         "sys_lang": "en_US"
     },
     "mirror_config": {
-        "custom_mirrors": [],
-        "mirror_regions": {}
+        "custom_mirrors": [
+            "https://mirror.yandex.ru/archlinux/$repo/os/$arch"
+        ],
+        "mirror_regions": {
+            "Russia": [
+                "https://mirror.yandex.ru/archlinux/$repo/os/$arch"
+            ]
+        }
     },
     "network_config": {
         "type": "nm"
     },
     "ntp": true,
     "packages": [
+        "base-devel",
+        "curl",
+        "file",
         "flatpak",
-        "git"
+        "git",
+        "procps-ng"
     ],
-    "parallel downloads": 0,
+    "parallel downloads": 10,
     "profile_config": {
         "gfx_driver": "Intel (open-source)",
         "greeter": "ly",
         "profile": {
             "custom_settings": {
-                "i3-wm": {}
+                "i3-wm": {
+                    "additional_packages": [
+                        "rofi",
+                        "i3status-rust",
+                        "picom"
+                    ]
+                }
             },
             "details": [
                 "i3-wm"
