@@ -16,6 +16,7 @@ sudo snapper -c root set-config "TIMELINE_CREATE=yes" "TIMELINE_CLEANUP=yes"
 
 # Включение и запуск служб
 sudo systemctl enable --now snapper-timeline.timer
+sudo systemctl enable --now snapper-boot.timer
 sudo systemctl enable --now snapper-cleanup.timer
 sudo systemctl enable --now grub-btrfs.path
 
