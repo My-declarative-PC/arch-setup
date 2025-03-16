@@ -8,6 +8,7 @@ yay -S \
   gammastep \
   i3status-rust \
   i3-wm \
+  imagemagick \
   kdeconnect-kde \
   libnotify \
   maim \
