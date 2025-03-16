@@ -2,7 +2,7 @@
 
 yay -S \
   catppuccin-cursors-mocha \
-  catppuccin-gtk-theme-mauve \
+  catppuccin-gtk-theme-mocha \
   dunst \
   feh \
   gammastep \
