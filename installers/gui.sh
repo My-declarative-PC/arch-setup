@@ -6,11 +6,15 @@ yay -S \
   dunst \
   feh \
   gammastep \
+  gvfs \
+  gvfs-smb \
   i3status-rust \
   i3-wm \
   imagemagick \
   kdeconnect-kde \
   libnotify \
+  libnotify \
+  lxappearance-gtk3 \
   maim \
   NetworkManager-applet \
   noto-fonts-emoji \
@@ -26,10 +30,8 @@ yay -S \
   thunar-volman \
   ttf-firacode-nerd \
   ttf-font-awesome \
-  upower \
   wezterm \
-  xclip \
-  xclipboard \
   xdg-desktop-portal \
   xdg-desktop-portal-gtk \
-  xfce4-clipman-plugin
+  xfce4-clipman-plugin \
+  xorg-xrandr
