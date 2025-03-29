@@ -1,11 +1,12 @@
 #!/bin/bash
 
 yay -S \
-shiny-mirrors \
-  xclip \
-  xclipboard \
-  upower \
-  openssh \
-  psmisc \
-  cifs-utils \
-
+    shiny-mirrors \
+    cifs-utils \
+    networkmanager-openconnect \
+    openssh \
+    psmisc \
+    upower \
+    wireguard-tools \
+    xclip \
+    xclipboard
