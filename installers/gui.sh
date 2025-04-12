@@ -1,6 +1,7 @@
 #!/bin/bash
 
 yay -S \
+    auto-cpufreq \
     blueman \
     bluez \
     catppuccin-cursors-mocha \
@@ -10,26 +11,26 @@ yay -S \
     gammastep \
     gvfs \
     gvfs-smb \
-    i3status-rust \
+    i3status-rust-full-git \
+    i3tree \
     i3-wm \
     imagemagick \
     kdeconnect-kde \
     libnotify \
-    libnotify \
     lxappearance-gtk3 \
     maim \
     NetworkManager-applet \
+    networkmanager-openvpn \
     noto-fonts-emoji \
+    openseachest \
+    paccache \
+    paccache-hook \
     papirus-folders-catppuccin-git \
     picom \
+    playerctl \
     polkit \
     polkit-gnome \
-    rofi \
-    thunar \
-    thunar-archive-plugin \
-    thunar-shares-plugin \
-    thunar-vcs-plugin \
-    thunar-volman \
+    thinkpad-scripts \
     ttf-firacode-nerd \
     ttf-font-awesome \
     wezterm \
@@ -37,3 +38,17 @@ yay -S \
     xdg-desktop-portal-gtk \
     xfce4-clipman-plugin \
     xorg-xrandr
+
+# Rofi
+yay -S \
+    rofi \
+    rofi-greenclip \
+    rofimoji
+
+# Thunar
+yay -S \
+    thunar \
+    thunar-archive-plugin \
+    thunar-shares-plugin \
+    thunar-vcs-plugin \
+    thunar-volman
