@@ -39,12 +39,6 @@ yay -S \
     xfce4-clipman-plugin \
     xorg-xrandr
 
-# Rofi
-yay -S \
-    rofi \
-    rofi-greenclip \
-    rofimoji
-
 # Thunar
 yay -S \
     thunar \

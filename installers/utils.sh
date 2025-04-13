@@ -10,4 +10,5 @@ yay -S \
     upower \
     wireguard-tools \
     xclip \
-    xclipboard
+    xclipboard \
+    xdotool
