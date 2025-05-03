@@ -4,7 +4,7 @@
     "audio_config": {
         "audio": "pipewire"
     },
-    "bootloader": "Systemd-boot",
+    "bootloader": "Grub",
     "config_version": "3.0.2",
     "disk_config": {
         "config_type": "manual_partitioning",
@@ -20,11 +20,11 @@
                             },
                             {
                                 "mountpoint": "/media",
-                                "name": "@home/media"
+                                "name": "@media"
                             },
                             {
                                 "mountpoint": "/var/lib/docker",
-                                "name": "@home/docker"
+                                "name": "@docker"
                             }
                         ],
                         "dev_path": null,
@@ -33,18 +33,11 @@
                         ],
                         "fs_type": "btrfs",
                         "mount_options": [
-                            "compress=zstd,noatime,discard=async"
+                            "compress=zstd"
                         ],
-                        "mountpoint": "/home",
-                        "obj_id": "f08c1ac4-a5de-4888-abe9-7aa5854386f6",
-                        "size": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "B",
-                            "value": 500106788864
-                        },
+                        "mountpoint": null,
+                        "wipe": false,
+                        "size": "100%",
                         "start": {
                             "sector_size": {
                                 "unit": "B",
@@ -53,11 +46,10 @@
                             "unit": "MiB",
                             "value": 1
                         },
-                        "status": "create",
                         "type": "primary"
                     }
                 ],
-                "wipe": true
+                "wipe": false
             },
             {
                 "device": "/dev/sdb",
@@ -72,14 +64,13 @@
                         "fs_type": "fat32",
                         "mount_options": [],
                         "mountpoint": "/boot",
-                        "obj_id": "943d060d-078c-4938-a0a2-e36316b56e5e",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
                                 "value": 512
                             },
-                            "unit": "GiB",
-                            "value": 1
+                            "unit": "MiB",
+                            "value": 1024
                         },
                         "start": {
                             "sector_size": {
@@ -115,25 +106,17 @@
                         "flags": [],
                         "fs_type": "btrfs",
                         "mount_options": [
-                            "compress=zstd,noatime,discard=async"
+                            "compress=zstd"
                         ],
                         "mountpoint": null,
-                        "obj_id": "0e384f68-4a7c-4ec5-b5ba-22b6e59d3877",
-                        "size": {
-                            "sector_size": {
-                                "unit": "B",
-                                "value": 512
-                            },
-                            "unit": "B",
-                            "value": 254985371648
-                        },
+                        "size": "100%",
                         "start": {
                             "sector_size": {
                                 "unit": "B",
                                 "value": 512
                             },
-                            "unit": "B",
-                            "value": 1074790400
+                            "unit": "MiB",
+                            "value": 1025
                         },
                         "status": "create",
                         "type": "primary"
@@ -151,15 +134,33 @@
     "locale_config": {
         "kb_layout": "us",
         "sys_enc": "UTF-8",
-        "sys_lang": "en_US"
+        "sys_lang": "en_US.UTF-8"
     },
     "mirror_config": {
-        "custom_mirrors": [
-            "https://mirror.yandex.ru/archlinux/$repo/os/$arch"
-        ],
+        "custom_mirrors": [],
         "mirror_regions": {
             "Russia": [
-                "https://mirror.yandex.ru/archlinux/$repo/os/$arch"
+                "http://mirror.yandex.ru/archlinux/$repo/os/$arch",
+                "https://mirror.yandex.ru/archlinux/$repo/os/$arch",
+                "http://ru.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "https://ru.mirrors.cicku.me/archlinux/$repo/os/$arch",
+                "http://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
+                "https://mirror.truenetwork.ru/archlinux/$repo/os/$arch",
+                "http://mirrors.powernet.com.ru/archlinux/$repo/os/$arch",
+                "http://repository.su/archlinux/$repo/os/$arch",
+                "https://repository.su/archlinux/$repo/os/$arch",
+                "http://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
+                "https://mirror.nw-sys.ru/archlinux/$repo/os/$arch",
+                "http://mirror.kamtv.ru/archlinux/$repo/os/$arch",
+                "https://mirror.kamtv.ru/archlinux/$repo/os/$arch",
+                "https://mirror2.sl-chat.ru/archlinux/$repo/os/$arch",
+                "https://mirror3.sl-chat.ru/archlinux/$repo/os/$arch",
+                "http://mirror.kpfu.ru/archlinux/$repo/os/$arch",
+                "https://mirror.kpfu.ru/archlinux/$repo/os/$arch",
+                "http://archlinux.gay/archlinux/$repo/os/$arch",
+                "https://archlinux.gay/archlinux/$repo/os/$arch",
+                "http://web.sketserv.ru/archlinux/$repo/os/$arch",
+                "https://web.sketserv.ru/archlinux/$repo/os/$arch"
             ]
         }
     },
@@ -178,7 +179,7 @@
     "parallel downloads": 10,
     "profile_config": {
         "gfx_driver": "Intel (open-source)",
-        "greeter": "ly",
+        "greeter": "sddm",
         "profile": {
             "custom_settings": {
                 "i3-wm": {
