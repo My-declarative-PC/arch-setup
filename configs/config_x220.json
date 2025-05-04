@@ -1,11 +1,10 @@
 {
-    "additional-repositories": [],
     "archinstall-language": "English",
     "audio_config": {
         "audio": "pipewire"
     },
     "bootloader": "Grub",
-    "config_version": "3.0.2",
+    "custom_commands": [],
     "disk_config": {
         "config_type": "manual_partitioning",
         "device_modifications": [
@@ -28,16 +27,21 @@
                             }
                         ],
                         "dev_path": null,
-                        "flags": [
-                            "linux-home"
-                        ],
+                        "flags": [],
                         "fs_type": "btrfs",
                         "mount_options": [
                             "compress=zstd"
                         ],
                         "mountpoint": null,
-                        "wipe": false,
-                        "size": "100%",
+                        "obj_id": "25f09359-d4be-430d-a139-89d537ebe7c8",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 500106788864
+                        },
                         "start": {
                             "sector_size": {
                                 "unit": "B",
@@ -46,6 +50,7 @@
                             "unit": "MiB",
                             "value": 1
                         },
+                        "status": "create",
                         "type": "primary"
                     }
                 ],
@@ -64,13 +69,14 @@
                         "fs_type": "fat32",
                         "mount_options": [],
                         "mountpoint": "/boot",
+                        "obj_id": "95ddf696-e9d1-4cdc-b41a-e5c10a028da1",
                         "size": {
                             "sector_size": {
                                 "unit": "B",
                                 "value": 512
                             },
-                            "unit": "MiB",
-                            "value": 1024
+                            "unit": "GiB",
+                            "value": 1
                         },
                         "start": {
                             "sector_size": {
@@ -109,14 +115,22 @@
                             "compress=zstd"
                         ],
                         "mountpoint": null,
-                        "size": "100%",
+                        "obj_id": "61a2f6cb-39ba-4a83-8a5d-c6a59c5ea666",
+                        "size": {
+                            "sector_size": {
+                                "unit": "B",
+                                "value": 512
+                            },
+                            "unit": "B",
+                            "value": 254985371648
+                        },
                         "start": {
                             "sector_size": {
                                 "unit": "B",
                                 "value": 512
                             },
-                            "unit": "MiB",
-                            "value": 1025
+                            "unit": "B",
+                            "value": 1074790400
                         },
                         "status": "create",
                         "type": "primary"
@@ -126,7 +140,6 @@
             }
         ]
     },
-    "disk_encryption": null,
     "hostname": "timofey-laptop",
     "kernels": [
         "linux-zen"
@@ -137,7 +150,6 @@
         "sys_lang": "en_US.UTF-8"
     },
     "mirror_config": {
-        "custom_mirrors": [],
         "mirror_regions": {
             "Russia": [
                 "http://mirror.yandex.ru/archlinux/$repo/os/$arch",
@@ -162,7 +174,9 @@
                 "http://web.sketserv.ru/archlinux/$repo/os/$arch",
                 "https://web.sketserv.ru/archlinux/$repo/os/$arch"
             ]
-        }
+        },
+        "custom_servers": [],
+        "optional_repositories": []
     },
     "network_config": {
         "type": "nm"
@@ -196,9 +210,8 @@
             "main": "Desktop"
         }
     },
-    "save_config": null,
+    "services": [],
     "swap": true,
     "timezone": "Europe/Moscow",
-    "uki": false,
-    "version": "3.0.2"
+    "version": null
 }
