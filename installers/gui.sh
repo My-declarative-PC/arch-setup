@@ -4,8 +4,6 @@ yay -S \
     auto-cpufreq \
     blueman \
     bluez \
-    catppuccin-cursors-mocha \
-    catppuccin-gtk-theme-mocha \
     dunst \
     feh \
     gammastep \
@@ -25,7 +23,6 @@ yay -S \
     openseachest \
     paccache \
     paccache-hook \
-    papirus-folders-catppuccin-git \
     picom \
     playerctl \
     polkit \
@@ -46,3 +43,10 @@ yay -S \
     thunar-shares-plugin \
     thunar-vcs-plugin \
     thunar-volman
+
+# Theming
+yay -S \
+    catppuccin-cursors-mocha \
+    catppuccin-gtk-theme-mocha \
+    papirus-folders-catppuccin-git \
+    papirus-icon-theme
