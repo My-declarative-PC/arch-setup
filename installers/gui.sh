@@ -13,7 +13,7 @@ yay -S \
     i3tree \
     i3-wm \
     imagemagick \
-    kdeconnect-kde \
+    kdeconnect \
     libnotify \
     lxappearance-gtk3 \
     maim \
