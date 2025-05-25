@@ -2,6 +2,7 @@
 
 yay -S \
     auto-cpufreq \
+    autorandr \
     blueman \
     bluez \
     dunst \
