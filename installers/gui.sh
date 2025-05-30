@@ -35,6 +35,7 @@ yay -S \
     xdg-desktop-portal \
     xdg-desktop-portal-gtk \
     xfce4-clipman-plugin \
+    xorg-xbacklight \
     xorg-xrandr
 
 # Thunar
